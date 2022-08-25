@@ -1,0 +1,11 @@
+body {
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+}
+
+.submitBtnBottom {
+    height:70px;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+}
