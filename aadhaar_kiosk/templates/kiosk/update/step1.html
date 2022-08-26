@@ -1,0 +1,29 @@
+{% extends "kiosk/base.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block app %}
+
+{% if LANGUAGE_CODE == "hi" %}
+{% include "includes/voice.html" with voice="कृपया अपना नाम और लिंग दर्ज करें" voice_lang="hi-IN" %}
+{% else  %}
+{% include "includes/voice.html" with voice="Please enter your 12 digit Aadhaar Number"%}
+{% endif %}
+
+  <div class="col-md-12" style="margin-top:-70px;">
+    <h1>{% trans "Enter Your 12 Digit Aadhaar Number" %}</h1>
+
+    <form method="post" class="mt-4">
+      {% csrf_token %}
+      <div id="div_id_firstname" class="mb-3">
+        </label>
+        <div class="onkeyboard">
+          <input data-kioskboard-type="numpad" type="text" pattern="^[0-9]{12}$" title="Please type only 12 digit aadhaar number" name="firstname" minlength="3" maxlength="255" class="textinput textInput form-control" required="" id="id_firstname">
+        </div>
+        
+      </div>
+      <input type="submit" name="save" value="Submit" class="btn btn-primary btn-lg btn-block button-5 fs-1" id="submit-id-save" style="">
+    </form>
+  </div>
+
+  {% include 'includes/textkeyboard.html' %}
+{% endblock app %}

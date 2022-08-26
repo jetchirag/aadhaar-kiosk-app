@@ -1,0 +1,379 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-26 08:58+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: aadhaar_kiosk/templates/account/account_inactive.html:5
+#: aadhaar_kiosk/templates/account/account_inactive.html:8
+msgid "Account Inactive"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/account_inactive.html:10
+msgid "This account is inactive."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:7
+msgid "Account"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:10
+msgid "E-mail Addresses"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:13
+msgid "The following e-mail addresses are associated with your account:"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:27
+msgid "Verified"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:29
+msgid "Unverified"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:31
+msgid "Primary"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:37
+msgid "Make Primary"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:38
+msgid "Re-send Verification"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:39
+msgid "Remove"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:46
+msgid "Warning:"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:46
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:51
+msgid "Add E-mail Address"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:56
+msgid "Add E-mail"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email.html:66
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email_confirm.html:6
+#: aadhaar_kiosk/templates/account/email_confirm.html:10
+msgid "Confirm E-mail Address"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email_confirm.html:16
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+"address for user %(user_display)s."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email_confirm.html:20
+msgid "Confirm"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/email_confirm.html:27
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please <a href="
+"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/login.html:7
+#: aadhaar_kiosk/templates/account/login.html:11
+#: aadhaar_kiosk/templates/account/login.html:56
+msgid "Sign In"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/login.html:17
+msgid "Please sign in with one of your existing third party accounts:"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/login.html:19
+#, python-format
+msgid ""
+"Or, <a href=\"%(signup_url)s\">sign up</a> for a %(site_name)s account and "
+"sign in below:"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/login.html:32
+msgid "or"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/login.html:41
+#, python-format
+msgid ""
+"If you have not created an account yet, then please <a href=\"%(signup_url)s"
+"\">sign up</a> first."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/login.html:55
+msgid "Forgot Password?"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/logout.html:5
+#: aadhaar_kiosk/templates/account/logout.html:8
+#: aadhaar_kiosk/templates/account/logout.html:17
+msgid "Sign Out"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/logout.html:10
+msgid "Are you sure you want to sign out?"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/password_change.html:6
+#: aadhaar_kiosk/templates/account/password_change.html:9
+#: aadhaar_kiosk/templates/account/password_change.html:14
+#: aadhaar_kiosk/templates/account/password_reset_from_key.html:5
+#: aadhaar_kiosk/templates/account/password_reset_from_key.html:8
+#: aadhaar_kiosk/templates/account/password_reset_from_key_done.html:4
+#: aadhaar_kiosk/templates/account/password_reset_from_key_done.html:7
+msgid "Change Password"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/password_reset.html:7
+#: aadhaar_kiosk/templates/account/password_reset.html:11
+#: aadhaar_kiosk/templates/account/password_reset_done.html:6
+#: aadhaar_kiosk/templates/account/password_reset_done.html:9
+msgid "Password Reset"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/password_reset.html:16
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/password_reset.html:21
+msgid "Reset My Password"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/password_reset.html:24
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/password_reset_done.html:15
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/password_reset_from_key.html:8
+msgid "Bad Token"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/password_reset_from_key.html:12
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/password_reset_from_key.html:18
+msgid "change password"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/password_reset_from_key.html:21
+#: aadhaar_kiosk/templates/account/password_reset_from_key_done.html:8
+msgid "Your password is now changed."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/password_set.html:6
+#: aadhaar_kiosk/templates/account/password_set.html:9
+#: aadhaar_kiosk/templates/account/password_set.html:14
+msgid "Set Password"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/signup.html:6
+msgid "Signup"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/signup.html:9
+#: aadhaar_kiosk/templates/account/signup.html:19
+msgid "Sign Up"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/signup.html:11
+#, python-format
+msgid ""
+"Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/signup_closed.html:5
+#: aadhaar_kiosk/templates/account/signup_closed.html:8
+msgid "Sign Up Closed"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/signup_closed.html:10
+msgid "We are sorry, but the sign up is currently closed."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/verification_sent.html:5
+#: aadhaar_kiosk/templates/account/verification_sent.html:8
+#: aadhaar_kiosk/templates/account/verified_email_required.html:5
+#: aadhaar_kiosk/templates/account/verified_email_required.html:8
+msgid "Verify Your E-mail Address"
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/verification_sent.html:10
+msgid ""
+"We have sent an e-mail to you for verification. Follow the link provided to "
+"finalize the signup process. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/verified_email_required.html:12
+msgid ""
+"This part of the site requires us to verify that\n"
+"you are who you claim to be. For this purpose, we require that you\n"
+"verify ownership of your e-mail address. "
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/verified_email_required.html:16
+msgid ""
+"We have sent an e-mail to you for\n"
+"verification. Please click on the link inside this e-mail. Please\n"
+"contact us if you do not receive it within a few minutes."
+msgstr ""
+
+#: aadhaar_kiosk/templates/account/verified_email_required.html:20
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
+"mail address</a>."
+msgstr ""
+
+#: aadhaar_kiosk/templates/base.html:73
+msgid "Done"
+msgstr ""
+
+#: aadhaar_kiosk/templates/kiosk/enrol/fingerprint.html:7
+msgid "Fingerprint Scanning"
+msgstr ""
+
+#: aadhaar_kiosk/templates/kiosk/enrol/iris.html:7
+msgid "Iris Scanning"
+msgstr ""
+
+#: aadhaar_kiosk/templates/kiosk/enrol/preview.html:7
+#, fuzzy
+#| msgid "Step 1: Please enter details"
+msgid "Please review your details"
+msgstr "चरण 1: कृपया विवरण दर्ज करें"
+
+#: aadhaar_kiosk/templates/kiosk/enrol/preview.html:12
+msgid "Address Details"
+msgstr ""
+
+#: aadhaar_kiosk/templates/kiosk/enrol/preview.html:15
+msgid "Contact Details"
+msgstr ""
+
+#: aadhaar_kiosk/templates/kiosk/enrol/step1.html:15
+msgid "Step 1: Please enter details"
+msgstr "सूचना दर्ज करे"
+
+#: aadhaar_kiosk/templates/kiosk/enrol/step1.html:19
+msgid "First Name"
+msgstr ""
+
+#: aadhaar_kiosk/templates/kiosk/enrol/step1.html:26
+msgid "Middle Name"
+msgstr ""
+
+#: aadhaar_kiosk/templates/kiosk/enrol/step1.html:32
+msgid "Last Name"
+msgstr ""
+
+#: aadhaar_kiosk/templates/kiosk/enrol/step2.html:10
+msgid "Enter Address: "
+msgstr ""
+
+#: aadhaar_kiosk/templates/kiosk/enrol/step3.html:32
+msgid "Step 3: Enter Email and Phone"
+msgstr ""
+
+#: aadhaar_kiosk/templates/kiosk/enrol/step4.html:7
+msgid "Please enter your Phone Number"
+msgstr ""
+
+#: aadhaar_kiosk/templates/kiosk/enrol/step_dob.html:44
+msgid "Enter your Date of Birth"
+msgstr ""
+
+#: aadhaar_kiosk/templates/kiosk/home.html:18
+msgid "Welcome to Aadhaar Kiosk!"
+msgstr "आधार कियोस्क में आपका स्वागत है!"
+
+#: aadhaar_kiosk/templates/kiosk/home.html:21
+msgid "New Enrolment"
+msgstr "नया नामांकन"
+
+#: aadhaar_kiosk/templates/kiosk/home.html:24
+msgid "Update Aadhaar"
+msgstr "आधार अपडेट करें"
+
+#: aadhaar_kiosk/templates/kiosk/update/step1.html:13
+msgid "Please Enter your Aadhaar Number"
+msgstr ""
+
+#: aadhaar_kiosk/users/admin.py:18
+msgid "Personal info"
+msgstr ""
+
+#: aadhaar_kiosk/users/admin.py:20
+msgid "Permissions"
+msgstr ""
+
+#: aadhaar_kiosk/users/admin.py:31
+msgid "Important dates"
+msgstr ""
+
+#: aadhaar_kiosk/users/apps.py:7
+msgid "Users"
+msgstr ""
+
+#: aadhaar_kiosk/users/forms.py:25 aadhaar_kiosk/users/tests/test_forms.py:36
+msgid "This username has already been taken."
+msgstr ""
+
+#: aadhaar_kiosk/users/models.py:15
+msgid "Name of User"
+msgstr ""
+
+#: aadhaar_kiosk/users/views.py:25
+msgid "Information successfully updated"
+msgstr ""
+
+#~ msgid "Hindi"
+#~ msgstr "हिन्दी"

@@ -1,0 +1,62 @@
+{% extends "kiosk/base.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block app %}
+
+<script>
+    function saveDob(){
+        var dob = $("#id_dob").val();
+        $("#hidden_dob").val(dob);
+        $("#dob_form").submit();
+    }
+    // on page load
+    $(function() {
+      // set the focus to the first input field
+      const dob = dobDatepicker("#id_dob", {
+        display_mode:  'popup',
+        year_range:  120,
+        enable_built_in_validation:  true,
+        enable_ordinal_number:  true,
+        show_long_month:  true,
+        dateFormat:  null,
+        zIndex: {
+          targetNode:  "150",
+          datepickerWidget:  "150",
+          invisibleBackground:  "100"
+        },
+        long_month: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        short_month: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        labels: {
+          header_label:  'When is your birthday?',	
+          select_day_label:  'Select day',
+          select_month_label:  'Select month',
+          select_year_label:  'Select year',	
+          reset_button_label:  'Reset and try again',
+          date_range_label:  'Year '  //label for year section -> "Year 2000 - 2020"
+        },
+        alerts: {
+          invalid_date_alert:  'Date is invalid'
+        }
+    });
+    })
+  </script>
+  <div class="col-md-12">
+    <h1>{% trans "Enter your Date of Birth" %}</h1>
+    <div id="div_id_dob" class="mb-5">
+        {% comment %} <label for="id_dob" class="form-label requiredField"> Date of Birth <span class="asteriskField">*</span> {% endcomment %}
+        {% comment %} </label> {% endcomment %}
+        <input type="date" name="dob" maxlength="255" class="form-control mt-4" required="required" id="id_dob">
+        <br><small class="form-text text-white w-100">{% trans 'Click on the field above to select your Date of Birth' %}</small>
+      </div>
+    <form method="post" id="dob_form">
+        {% csrf_token %}
+        <input hidden name="dob" id="hidden_dob" value="">
+        <button type="button" name="save" value="Submit" class="btn btn-primary btn-lg btn-block button-5 fs-1" id="submit-id-save" style="" onclick="saveDob();">Submit</button>
+    </form>
+  </div>
+
+  {% include "includes/voice.html" with voice="Please enter your date of birth" %}
+{% endblock app %}
+
+
+<input type="date" name="dob" data-kioskboard-type="all" data-kioskboard-placement="top" data-kioskboard-specialcharacters="true" class="onkeyboard dateinput form-control" required="" id="id_dob">

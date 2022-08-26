@@ -1,8 +1,59 @@
 {% extends "kiosk/base.html" %}
 {% load static i18n crispy_forms_tags %}
+
 {% block app %}
-  <div class="col-md-12">
+
+{% if LANGUAGE_CODE == "hi" %}
+{% include "includes/voice.html" with voice="कृपया अपना नाम और लिंग दर्ज करें" voice_lang="hi-IN" %}
+{% else  %}
+{% include "includes/voice.html" with voice="Please enter your name and gender"%}
+{% endif %}
+
+
+  <div class="col-md-12" style="margin-top:-70px;">
     <h1>{% trans "Step 1: Please enter details" %}</h1>
-    {% crispy form form.helper %}
+    <h4 class=" text-white">{% trans 'Only alphabets allowed in name fields' %}</h4>
+
+    <form method="post" class="mt-4">
+      {% csrf_token %}
+      {% comment %} Hidden input to store edit value {% endcomment %}
+      <input type="hidden" name="edit" value="{{ edit }}">
+      <div id="div_id_firstname" class="mb-3">
+        <label for="id_firstname" class="form-label requiredField"> {% trans 'First Name' %} <span class="asteriskField">*</span>
+        </label>
+        <div class="onkeyboard">
+          <input data-kioskboard-type="keyboard" type="text" pattern="^[A-Za-z ]{3,25}$" title="Please type only alphabets from 3 to 25 letters" name="firstname" minlength="3" maxlength="255" class="textinput textInput form-control" required="" id="id_firstname" value="{{ instance.firstname }}">
+        </div>
+        
+      </div>
+      <div id="div_id_middlename" class="mb-3">
+        <label for="id_middlename" class="form-label"> {% trans 'Middle Name' %}</label>
+        <div class="onkeyboard">
+          <input data-kioskboard-type="keyboard" type="text" pattern="^[A-Za-z ]{3,25}$" title="Please type only alphabets from 3 to 25 letters"  name="middlename" minlength="3" maxlength="255" class="textinput textInput form-control" id="id_middlename" value="{{ instance.middlename }}">
+        </div>
+      </div>
+      <div id="div_id_lastname" class="mb-3">
+        <label for="id_lastname" class="form-label"> {% trans 'Last Name' %} <span class="asteriskField">*</span></label> 
+        <div class="onkeyboard">
+          <input data-kioskboard-type="keyboard" type="text" pattern="^[A-Za-z ]{3,25}$" title="Please type only alphabets from 3 to 25 letters"  name="lastname" minlength="3" maxlength="255" class="textinput textInput form-control" id="id_lastname" required value="{{ instance.lastname }}">
+        </div>
+      </div>
+      <div id="div_id_gender" class="mb-3">
+        <label for="id_gender" class="form-label requiredField"> {% trans 'Gender' %} <span class="asteriskField">*</span>
+        </label>
+        <div class="onkeyboard">
+          <select name="gender" class="select form-select" required="" id="id_gender">
+            <option value="" selected="">---------</option>
+            <option value="M" {% if instance.gender == "M" %}selected{% endif %}>Male</option>
+            <option value="F" {% if instance.gender == "F" %}selected{% endif %}>Female</option>
+            <option value="T" {% if instance.gender == "T" %}selected{% endif %}>Transgender</option>
+          </select>
+        </div>
+        <small class="form-text text-white">{% trans 'Please click on the field above to select your Gender' %}</small>
+      </div>
+      <input type="submit" name="save" value="Submit" class="btn btn-primary btn-lg btn-block button-5 fs-1" id="submit-id-save" style="">
+    </form>
   </div>
+
+  {% include 'includes/textkeyboard.html' %}
 {% endblock app %}

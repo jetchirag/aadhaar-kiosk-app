@@ -1,6 +1,12 @@
 {% extends "kiosk/base.html" %}
 {% load static i18n %}
 {% block app %}
+{% if LANGUAGE_CODE == "hi" %}
+{% include "includes/voice.html" with voice="स्वागत! कृपया एक विकल्प चुनें" voice_lang="hi-IN" %}
+{% else  %}
+{% include "includes/voice.html" with voice="Welcome! Please select an option."%}
+{% endif %}
+
   <div class="col-md-12">
     <img src="{% static 'images/aadhaar_logo.webp' %}"
          alt="logo"
@@ -12,9 +18,9 @@
     <h1>{% trans "Welcome to Aadhaar Kiosk!" %}</h1>
   </div>
   <div class="col">
-    <a href="{% url 'formSessions:enrol1' %}" class="btn btn-lg btn-info">{% trans "New Enrolment" %}</a>
+    <a href="{% url 'formSessions:enrol1' %}" class="btn btn-lg button-5 w-100">{% trans "New Enrolment" %}</a>
   </div>
   <div class="col">
-    <button type="button" class="btn btn-lg btn-info">{% trans "Update Aadhaar" %}</button>
+    <a href="{% url 'formSessions:update1' %}" class="btn btn-lg button-5 w-100">{% trans "Update Aadhaar" %}</a>
   </div>
 {% endblock app %}

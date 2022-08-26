@@ -1,0 +1,25 @@
+{% load static i18n %}
+    <script>
+        KioskBoard.run('.emailinput', {
+          keysArrayOfObjects: null,
+          keysJsonUrl: '{% static 'kioskboard-keys-english.json' %}',
+          keysSpecialCharsArrayOfStrings: ['@','.'],
+          keysNumpadArrayOfNumbers: null,
+          language: 'en',
+          theme: 'light',
+          capsLockActive: true,
+          allowRealKeyboard: true,
+          allowMobileKeyboard: true,
+          cssAnimations: true,
+          cssAnimationsDuration: 360,
+          cssAnimationsStyle: 'slide',
+          keysAllowSpacebar: true,
+          keysSpacebarText: 'Space',
+          keysFontFamily: 'sans-serif',
+          keysFontSize: '22px',
+          keysFontWeight: 'normal',
+          keysIconSize: '25px',
+        });
+        
+  
+      </script>

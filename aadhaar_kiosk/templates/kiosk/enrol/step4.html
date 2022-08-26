@@ -1,0 +1,14 @@
+{% extends "kiosk/base.html" %}
+{% load static i18n crispy_forms_tags %}
+{% block app %}
+{% include "includes/voice.html" with voice="Please enter your phone number" %}
+
+  <div class="col-md-12">
+    <h1>{% trans "Please enter your Phone Number" %}</h1>
+    <label for="id_phone" class="form-label requiredField">
+      {% trans "Enter a 10 Digit Indian Phone Number" %}<span class="asteriskField">*</span> </label>
+    {% crispy form form.helper %}
+  </div>
+
+  {% include 'includes/numkeyboard.html' %}
+{% endblock app %}

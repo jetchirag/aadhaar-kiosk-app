@@ -16,8 +16,13 @@ NOTE: REQUIRED ENABLING SOUND IN SITE SETTINGS OF CHROME
   <div class="d-flex align-items-center justify-content-center h-100 w-100 text-white">
     <div class="container text-center">
       <div class="row text-center">
-        {% block app %}
-          {% endblock app %}
+        <h1 class="">Select Language to Start</h1>
+        <h1 class="mb-5">भाषा चुने</h1>
+        <div>
+
+        <div class="mb-3"><a href="{% url 'formSessions:set_language' slug="en-US" %}" class="btn button-5" style="width:300px;">English</a></div>
+        <div><a href="{% url 'formSessions:set_language' slug="hi" %}" class="btn button-5" style="width:300px;">हिन्दी</a></div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,36 @@
+{% extends "kiosk/base.html" %}
+{% load static i18n crispy_forms_tags %}
+{% block app %}
+{% comment %} <script>
+    KioskBoard.init();
+
+    KioskBoard.run('#id_email', {
+      keysArrayOfObjects: null,
+      keysJsonUrl: '{% static 'kioskboard-keys-english.json' %}',
+      keysSpecialCharsArrayOfStrings: {'@',},
+      keysNumpadArrayOfNumbers: null,
+      language: 'en',
+      theme: 'light',
+      capsLockActive: true,
+      allowRealKeyboard: false,
+      allowMobileKeyboard: false,
+      cssAnimations: true,
+      cssAnimationsDuration: 360,
+      cssAnimationsStyle: 'slide',
+      keysAllowSpacebar: true,
+      keysSpacebarText: 'Space',
+      keysFontFamily: 'sans-serif',
+      keysFontSize: '22px',
+      keysFontWeight: 'normal',
+      keysIconSize: '25px',
+    });
+</script> {% endcomment %}
+{% include "includes/voice.html" with voice="Please enter your email address" %}
+
+  <div class="col-md-12">
+    <h1>{% trans "Please enter your email address" %}</h1>
+    {% crispy form form.helper %}
+  </div>
+
+  {% include 'includes/emailkeyboard.html' %}
+{% endblock app %}

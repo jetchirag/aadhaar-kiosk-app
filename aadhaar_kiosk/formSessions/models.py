@@ -11,24 +11,27 @@ class enrolForm(models.Model):
 
 
     # Step 1 form fields:
-    fullname = models.CharField(max_length=255)
+    firstname = models.CharField(max_length=255)
+    middlename = models.CharField(max_length=255, blank=True)
+    lastname = models.CharField(max_length=255, blank=True)
     gender = models.CharField(max_length=1, choices=(
         ('M', 'Male'),
         ('F', 'Female'),
         ('T', 'Transgender'),
     ))
-    dob = models.DateField()
+    dob = models.DateField(null=True)
 
     # Step 2: Adress
-    address_co = models.CharField(max_length=255,null=True)
-    address_no = models.CharField(max_length=255,null=True)
-    address_2 = models.CharField(max_length=1024,null=True)
-    address_landmark = models.CharField(max_length=1024,null=True)
-    address_area = models.CharField(max_length=1024,null=True)
-    address_city = models.CharField(max_length=255,null=True)
-    address_postoffice = models.CharField(max_length=255,null=True)
-    address_district = models.CharField(max_length=255,null=True)
-    address_subdistrict = models.CharField(max_length=255,null=True)
+    address_co = models.CharField(max_length=255,null=True,blank=True)
+    address_no = models.CharField(max_length=255,null=True,blank=True)
+    address_2 = models.CharField(max_length=1024,null=True,blank=True)
+    address_landmark = models.CharField(max_length=1024,null=True,blank=True)
+    address_area = models.CharField(max_length=1024,null=True,blank=True)
+    address_city = models.CharField(max_length=255,null=True,blank=True)
+    address_postoffice = models.CharField(max_length=255,null=True,blank=True)
+    address_district = models.CharField(max_length=255,null=True,blank=True)
+    address_subdistrict = models.CharField(max_length=255,null=True,blank=True)
+    address_state = models.CharField(max_length=255,null=True,blank=True)
 
     # Step 3: Electronic Details
     email = models.EmailField(null=True)
@@ -41,7 +44,7 @@ class enrolForm(models.Model):
         ('Guardian', 'Guardian'),
         ('Husband', 'Husband'),
         ('Wife', 'Wife'),
-    ),null=True)
+    ),null=True)    
     details_else_name = models.CharField(max_length=255,null=True)
     details_else_no = models.CharField(max_length=255,null=True)
 

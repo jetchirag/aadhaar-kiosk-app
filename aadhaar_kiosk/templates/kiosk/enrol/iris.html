@@ -1,0 +1,11 @@
+{% extends "kiosk/base.html" %}
+{% load static i18n crispy_forms_tags %}
+{% block app %}
+{% include "includes/voice.html" with voice="Press the button to start Iris Scanning" %}
+
+  <div class="col-md-12">
+    <h1>{% trans "Iris Scanning" %}</h1>
+    <a href="iris:start" class="btn button-5">Scan Iris</a>    
+  </div>
+
+{% endblock app %}

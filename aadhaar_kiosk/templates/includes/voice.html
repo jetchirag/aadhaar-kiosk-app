@@ -1,0 +1,29 @@
+{% load static i18n %}
+{% if voice %}
+<script>
+  function playVoice(){
+    var voice = new SpeechSynthesisUtterance();
+    voice.lang = {% if voice_lang %}"{{voice_lang}}"{% else %}"en-US"{% endif %};
+    voice.text = "{{ voice }}";
+    speechSynthesis.speak(voice);
+  }
+  $(document).ready( function () {
+    
+
+    {% comment %} playVoice(); {% endcomment %}
+   
+  
+  });
+</script>
+<button class="btn" onclick="playVoice()" style="
+    float: right;
+    position: fixed;
+    bottom: 90px;
+    left: 17px;
+    width: 63px;
+    padding: 3px;
+    background: white;
+    border-radius: 200px;
+"><img src="/static/images/volume.png" style="width:50px;" onclick="playVoice();"></button>
+{% comment %} <audio id="voice" src="{% static voice %}"></audio> {% endcomment %}
+{% endif %}

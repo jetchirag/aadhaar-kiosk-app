@@ -1,0 +1,23 @@
+{% extends "kiosk/base.html" %}
+{% load static i18n crispy_forms_tags %}
+
+
+{% block app %}
+
+
+{% include "includes/voice.html" with voice="Enter Address "|add:label voice_lang="en-US" %}
+  <div class="col-md-12">
+    <h1>{% trans "Enter Address: " %}{{ label }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div id="div_id_{{ name }}" class="mb-3">
+          {% comment %} <label for="id_{{ name }}" class="form-label requiredField"> {{ label }} <span class="asteriskField">*</span> {% endcomment %}
+          </label>
+          <input type="text" name="{{ name }}" maxlength="255" class="textinput textInput form-control" required="" id="id_{{ name }}">
+        </div>
+        <input type="submit" name="save" value="Submit" class="btn btn-primary btn-lg btn-block button-5 fs-1" id="submit-id-save" style="">
+    </form>
+  </div>
+
+  {% include 'includes/textkeyboard.html' %}
+{% endblock app %}
